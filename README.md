@@ -11,17 +11,17 @@ node index.js
 * [x] Functional, deployed application.
 * [x] GitHub repository with a unique name and a README describing project.
 * [x] The application generates a PDF resume from the user provided GitHub profile.
-        * [x] Profile image from GitHub profile
-        * [x] User name
-        * [ ] Links to the following:
-            * [ ] User location (via Google Maps)
-            * [x] User GitHub profile
-            * [ ] User blog
-        * [x] User bio
-        * [x] Number of public repositories
-        * [x] Number of followers
-        * [x] Number of GitHub stars
-        * [x] Number of users following
+* [x] Profile image from GitHub profile
+* [x] User name
+* [ ] Links to the following:
+* [ ] User location (via Google Maps)
+* [x] User GitHub profile
+* [ ] User blog
+* [x] User bio
+* [x] Number of public repositories
+* [x] Number of followers
+* [x] Number of GitHub stars
+* [x] Number of users following
 * [x] The background color of the generated PDF matches the color that the user provides.
 
 ```
