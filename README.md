@@ -13,10 +13,10 @@ node index.js
 * [x] The application generates a PDF resume from the user provided GitHub profile.
 * [x] Profile image from GitHub profile
 * [x] User name
-* [ ] Links to the following:
-* [ ] User location (via Google Maps)
+* [x] Links to the following:
+* [x] User location (via Google Maps)
 * [x] User GitHub profile
-* [ ] User blog
+* [x] User blog
 * [x] User bio
 * [x] Number of public repositories
 * [x] Number of followers
