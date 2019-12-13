@@ -1,6 +1,12 @@
 const inquirer = require('inquirer');
 const axios = require('axios');
 const pdf = require('html-pdf');
+const options = {
+  format: 'Letter',
+  zoomFactor: '.50',
+  border: '1in'
+};
+
 
 class DoMyHomework {
   constructor() {
@@ -40,6 +46,7 @@ class DoMyHomework {
             name,
             blog,
             bio,
+            html_url,
             public_repos,
             followers,
             following
@@ -54,6 +61,7 @@ class DoMyHomework {
         this.name = name;
         this.blog = blog;
         this.bio = bio;
+        this.html_url = html_url;
         this.public_repos = public_repos;
         this.followers = followers;
         this.following = following;
@@ -63,13 +71,6 @@ class DoMyHomework {
       }
     );
   }
-
-//   <html>
-//   <body>
-//   <div>name: ${this.name}</div>
-//   <div>bio: ${this.bio}</div>
-//   </body>
-//   </html>
 
   createHtml() {
     this.html = `
@@ -81,6 +82,7 @@ class DoMyHomework {
     
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/styles/style.css" />
+        <link media="print" href="assets/styles/print.css" />
         <title>Developer Profile Generator</title>
       </head>
       <body>
@@ -88,12 +90,13 @@ class DoMyHomework {
             <div class="container">
     
                 <div style="background-color: ${this.color};">
-                    <img src="${this.avatar_url}" alt="GitHub Avatar" />
-                    Hello.
-                    My name is ${this.name}.
-                    ${this.location}, ${this.githubUserName}+github url, ${this.blog}
+                    <img class="avatar" src="${this.avatar_url}" alt="GitHub Avatar" style="width: 75px" />
+                    Hello.<br/>
+                    My name is ${this.name}.<br/>
+                    I am in ${this.location}.<br/>
+                    <a href="${this.html_url}">GitHub</a> ${this.blog}
                 </div>
-    
+
                 <div>${this.bio}</div>
     
                 <div class="row row-cols-1 row-cols-md-2">
@@ -143,7 +146,7 @@ class DoMyHomework {
   }
 
   createPdf() {
-    pdf.create(this.html).toFile('./dev-profile.pdf', function(err, res) {
+    pdf.create(this.html, options).toFile('./dev-profile.pdf', function(err, res) {
       if (err) return console.log(err);
       console.log(res);
     });
