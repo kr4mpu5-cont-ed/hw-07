@@ -1,6 +1,39 @@
-.cardColor {
+.darkmode {
+    background-color: #333;
+    color: #ccc;
+}
+
+.lightmode {
+    background-color: #aaa;
+    color: #000;
+}
+
+.divbg {
     background-color: coral;
 }
-img.avatar {
-    width: 50px;
+
+.card {
+    margin: 25px;
+}
+
+.img-avatar {
+    width: 200px;
+    border-radius: 50%;
+    border: #aaaadd 5px solid;
+    filter: drop-shadow(5px 5px 10px #666);
+}
+
+@media print {
+    .container {
+      width: auto;
+    }
+    body {
+        margin:0;
+        padding:0;
+        line-height: 1.4em;
+        word-spacing: 1px;
+        letter-spacing: 0.2px;
+        font: 13px Arial, Helvetica, "Lucida Grande", serif;
+        color: #000;
+    }
 }

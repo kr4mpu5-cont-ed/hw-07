@@ -14,9 +14,9 @@ node index.js
 * [x] Profile image from GitHub profile
 * [x] User name
 * [x] Links to the following:
-* [x] User location (via Google Maps)
-* [x] User GitHub profile
-* [x] User blog
+    * [x] User location (via Google Maps)
+    * [x] User GitHub profile
+    * [x] User blog
 * [x] User bio
 * [x] Number of public repositories
 * [x] Number of followers
@@ -35,6 +35,6 @@ THEN a PDF profile is generated
 ## Submission on BCS
 
 You are required to submit the following:
-* [ ] An animated GIF demonstrating the app functionality
+* [x] An animated GIF demonstrating the app functionality
 * [x] A generated PDF of your GitHub profile
 * [x] The URL of the GitHub repository
