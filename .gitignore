@@ -1,3 +1,4 @@
 .DS_Store
 README.old.md
 _reference/*
+node_modules
